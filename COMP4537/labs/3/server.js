@@ -17,19 +17,19 @@ class Server {
 
     handleRequest(req, res) {
         const url = new URL(req.url, `http://${req.headers.host}`);
-        if (url.pathname === '/getDate' && req.method === 'GET') {
+        if ((url.pathname === '/getDate' || url.pathname ===  "/COMP4537/labs/3/getDate") && req.method === 'GET') {
             const name = url.searchParams.get('name');
             this.sendDateResponse(res, name);
             return;
         }
 
-        if (url.pathname === '/writeFile' && req.method === 'GET') {
+        if ((url.pathname === '/writeFile' || url.pathname === "/COMP4537/labs/3/writeFile") && req.method === 'GET') {
             const text = url.searchParams.get('text');
             this.writeFileResponse(res, text);
             return;
         }
 
-         if (url.pathname === '/readFile/file.txt' && req.method === 'GET') {
+         if ((url.pathname === '/readFile/file.txt' || url.pathname === "/COMP4537/labs/3/readFile/file.txt") && req.method === 'GET') {
             this.readFileResponse(res);
             return;
          }
