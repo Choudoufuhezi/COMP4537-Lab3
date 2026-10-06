@@ -1,0 +1,158 @@
+/*<!-- Note: Use of ChatGPT - Codex: assisted with drafting and revising this Lab 1 assignment. -->*/
+
+:root {
+    color: #172033;
+    background: #f4f7fb;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 24px;
+}
+
+.app-shell {
+    width: min(100%, 960px);
+    margin: 0 auto;
+    padding: 28px;
+    border: 2px solid #315b89;
+    background: #ffffff;
+}
+
+.landing-page {
+    text-align: center;
+}
+
+.student-name {
+    font-size: 1.1rem;
+}
+
+.page-navigation {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    margin-top: 28px;
+}
+
+.page-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 24px;
+    margin-bottom: 36px;
+}
+
+.page-header h1,
+.status-message {
+    margin: 0;
+}
+
+.status-message {
+    text-align: right;
+}
+
+.note-container {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.note-row {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+.note-row textarea,
+.reader-note {
+    width: min(100%, 520px);
+    min-height: 100px;
+    padding: 14px;
+    border: 2px solid #315b89;
+    background: #4778c7;
+    color: #ffffff;
+    font: inherit;
+    font-size: 1.05rem;
+}
+
+.note-row textarea {
+    resize: vertical;
+}
+
+.reader-note {
+    min-height: auto;
+    white-space: pre-wrap;
+    overflow-wrap: anywhere;
+}
+
+button,
+.button-link {
+    display: inline-block;
+    padding: 10px 18px;
+    border: 1px solid #27598f;
+    border-radius: 6px;
+    background: #356fc4;
+    color: #ffffff;
+    font: inherit;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.add-button {
+    margin-top: 18px;
+    border-color: #427a27;
+    background: #64ad3f;
+}
+
+.remove-button {
+    border-color: #ad4e13;
+    background: #e97824;
+}
+
+.page-footer {
+    margin-top: 48px;
+}
+
+.back-button {
+    background: #475569;
+}
+
+button:hover,
+.button-link:hover {
+    filter: brightness(0.92);
+}
+
+button:focus-visible,
+.button-link:focus-visible,
+textarea:focus-visible {
+    outline: 3px solid #f2b705;
+    outline-offset: 3px;
+}
+
+@media (max-width: 640px) {
+    body {
+        padding: 12px;
+    }
+
+    .app-shell {
+        padding: 18px;
+    }
+
+    .page-header,
+    .note-row {
+        align-items: stretch;
+        flex-direction: column;
+    }
+
+    .status-message {
+        text-align: left;
+    }
+
+    .remove-button {
+        align-self: flex-start;
+    }
+}
